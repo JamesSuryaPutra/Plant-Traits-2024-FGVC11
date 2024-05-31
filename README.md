@@ -16,7 +16,9 @@ A data treasure in this regard may be the growing availability of citizen scienc
 In its original form, this data initially only provides information on the species name of a plant and not its traits. However, a pioneering study showed that artificial intelligence can predict plant traits from such photographs using Convolutional Neural Networks (Schiller et al., 2021). To achieve this, we paired sample images from the iNaturalist database with plant trait data that scientists have been curating for decades for various species. The challenge was that the images and plant trait observations were not acquired for the same plant individuals or at the same time. Nevertheless, using a weakly supervised learning approach, we trained models that demonstrated the potential of this approach for a few plant traits. However, this potential was evident only for a limited number of plant traits and a couple of thousand images. This competition aims to further unlock the potential of predicting plant traits from plant photographs. To achieve this, we gathered more training data (over 30,000 images with labels).
 
 Find here the original article:
+
 Schiller, C., Schmidtlein, S., Boonman, C., Moreno-Martínez, A., & Kattenborn, T. (2021). Deep learning and citizen science enable automated plant trait predictions from photographs. Scientific Reports, 11(1), 16395. (https://www.nature.com/articles/s41598-021-95616-0)
+
 
 The interested reader may also see these references for some background and the general idea:
 - Wolf, S., Mahecha, M. D., Sabatini, F. M., Wirth, C., Bruelheide, H., Kattge, J., … & Kattenborn, T. (2022). Citizen science plant observations encode global trait patterns. Nature Ecology & Evolution, 1-10. (https://www.nature.com/articles/s41559-022-01904-x)
