@@ -1,4 +1,5 @@
 # PlantTraits2024 - FGVC11
+![header](https://github.com/JamesSuryaPutra/Plant-Traits-2024-FGVC11/assets/155945814/3c179483-6da5-46b2-8c87-b786fa5104ec)
 
 # Overview
 We welcome you to PlantTraits2024 Challenge, an exciting part of the FGVC11 workshop at CVPR 2024, where you have the chance to personally contribute to advance our understanding of the global patterns of biodiversity. Our goal is to predict a broad set of 6 plant traits (e.g. leaf area, plant height) from crowd-sourced plant images and some ancillary data.
@@ -13,11 +14,16 @@ This competition aims to predict plant properties; so called plant traits, from 
 
 A data treasure in this regard may be the growing availability of citizen science photographs. Thousands of citizens around the globe photograph plants with species identification apps (examples are iNaturalist or Pl@ntNet). The species are identified using AI algorithms, and the prediction, photograph, and geolocation are curated in open databases. There are already more than 20 million plant photographs available, covering all ecosystem types and continents.
 
+![inbox_3319247_ec99f4290e7c7ff3cdc5fe57ed9c1509_sample_images](https://github.com/JamesSuryaPutra/Plant-Traits-2024-FGVC11/assets/155945814/c052d96b-8999-4a12-965a-8136b592940e)
+
+
 In its original form, this data initially only provides information on the species name of a plant and not its traits. However, a pioneering study showed that artificial intelligence can predict plant traits from such photographs using Convolutional Neural Networks (Schiller et al., 2021). To achieve this, we paired sample images from the iNaturalist database with plant trait data that scientists have been curating for decades for various species. The challenge was that the images and plant trait observations were not acquired for the same plant individuals or at the same time. Nevertheless, using a weakly supervised learning approach, we trained models that demonstrated the potential of this approach for a few plant traits. However, this potential was evident only for a limited number of plant traits and a couple of thousand images. This competition aims to further unlock the potential of predicting plant traits from plant photographs. To achieve this, we gathered more training data (over 30,000 images with labels).
 
 Find here the original article:
 
 Schiller, C., Schmidtlein, S., Boonman, C., Moreno-Martínez, A., & Kattenborn, T. (2021). Deep learning and citizen science enable automated plant trait predictions from photographs. Scientific Reports, 11(1), 16395. (https://www.nature.com/articles/s41598-021-95616-0)
+
+![inbox_3319247_4df028d3fc43ea0fade8833e14671360_sample_preds](https://github.com/JamesSuryaPutra/Plant-Traits-2024-FGVC11/assets/155945814/f1118c77-adfe-4bf7-942d-6cfe74f3dd46)
 
 
 The interested reader may also see these references for some background and the general idea:
@@ -27,12 +33,15 @@ The interested reader may also see these references for some background and the 
 # Competition
 The primary objective of this competition is to employ deep learning-based regression models, such as Convolutional Neural Networks (CNNs) like ConvNext or Transformers, to predict plant traits from photographs. These plant traits, although available for each image, may not yield exceptionally high accuracies due to the inherent heterogeneity of citizen science data. The various plant traits describe chemical tissue properties that are loosely related to the visible appearance of plants in images. Despite the anticipated moderate accuracies, the overarching goal is to explore the potential of this approach and gain insights into global changes affecting ecosystems. Your contribution to uncovering the wealth of data and the distribution of plant traits worldwide is invaluable.
 
-To enhance model performance, consider implementing the following strategies:
-- Multi-task learning scheme
+To enhance model performance, consider implementing the following strategies.
+
+### Multi-task learning scheme
 Implement a multi-task learning approach where the model predicts multiple plant traits simultaneously from photographs. This enables the model to capture relationships between different plant traits, potentially boosting overall performance. Predicting all traits at once is considered the most promising approach.
-- Integration of ancillary geodata
+
+### Integration of ancillary geodata
 In a pioneering study (Schiller et al. 2021), climate information was integrated based on the photograph's location, recognizing the significant impact of temperature, precipitation, and seasonality on plant growth. For this competition, besides climate data (derived from worldclim), additional ancillary predictors from various geodatasets are provided, including multitemporal optical and radar satellite data (MODIS, VOD, respectively), and soil information. These predictors are intended to supplement plant photographs, offering valuable contextual information. Explore the potential of training a multi-modal model where predictors include a plant image along with a single vector combining all ancillary information or multiple vectors for each information set (climate data, soil data, satellite data). Refer to the 'Data' section for detailed information on datasets.
-- Ensembles
+
+### Ensembles
 It may also be promising to test model ensembles (different CNN backbones in combination), given that four eyes see more than one.
 
 Your contribution in exploring and utilizing this diverse set of data will not only advance the field but also contribute significantly to understanding the broader implications of global changes on ecosystems. Your efforts in this competition will help uncover valuable insights from the wealth of citizen science data.
